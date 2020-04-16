@@ -1,4 +1,4 @@
-{{ if .Date }}
+{{ if (and .Date (not .Params.nodate)) }}
 <span class="article-date">
   <i class="icon icon-calendar-check"></i>&nbsp;
 <a href="{{- .Permalink }}" class="{{ .Scratch.Get "class_name" }}">
